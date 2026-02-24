@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insan Anshori Pasi | Arabic & Tahfidz Educator</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.fade-in { 
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: all 0.8s ease; 
+}
+
+.fade-in.show { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Dark mode smooth transition */
+html.dark {
+  color-scheme: dark;
+}
+</style>
+
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition duration-500">
+
+<!-- NAVBAR -->
+<nav class="bg-emerald-800 dark:bg-gray-800 text-white p-4 shadow-lg fixed w-full z-50 top-0">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+    <div>
+      <h1 class="font-bold text-xl">Insan Anshori Pasi</h1>
+      <p class="text-emerald-200 text-xs">Arabic & Tahfidz Educator</p>
+    </div>
+    
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="#about" class="hover:text-emerald-300 transition font-medium">About</a>
+      <a href="#experience" class="hover:text-emerald-300 transition font-medium">Experience</a>
+      <a href="#portfolio" class="hover:text-emerald-300 transition font-medium">Portfolio</a>
+      <a href="#contact" class="hover:text-emerald-300 transition font-medium">Contact</a>
+      <button onclick="toggleDark()" class="bg-white text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
+        🌙 Dark
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden" onclick="toggleMenu()" class="text-white">
+      <i data-feather="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-emerald-900 p-4 mt-2">
+    <a href="#about" class="block py-2 hover:text-emerald-300">About</a>
+    <a href="#experience" class="block py-2 hover:text-emerald-300">Experience</a>
+    <a href="#portfolio" class="block py-2 hover:text-emerald-300">Portfolio</a>
+    <a href="#contact" class="block py-2 hover:text-emerald-300">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="pt-40 pb-32 bg-gradient-to-b from-emerald-900 to-emerald-800 dark:from-gray-800 dark:to-gray-900 text-white text-center">
+  <div class="max-w-4xl mx-auto px-6 fade-in">
+    <!-- Profile Image -->
+    <div class="mb-8">
+      <div class="w-48 h-48 mx-auto rounded-full border-4 border-white shadow-2xl overflow-hidden">
+        <img src="assets/profile.jpg" alt="Insan Anshori Pasi" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <h2 class="text-5xl md:text-6xl font-bold mb-4">
+      Insan Anshori Pasi
+    </h2>
+    
+    <!-- Tagline -->
+    <p class="text-2xl text-emerald-200 mb-6 font-semibold">
+      Arabic & Tahfidz Educator | Islamic Educator & Mentor
+    </p>
+
+    <!-- Description -->
+    <p class="text-lg text-emerald-100 max-w-2xl mx-auto mb-8 leading-relaxed">
+      Pendidik Bahasa Arab dan Tahfidz Al-Qur'an dengan pengalaman di lingkungan pendidikan Islam. Fokus pada metode pembelajaran sistematis, pemahaman yang mudah, dan pengembangan karakter peserta didik berdasarkan manhaj yang lurus.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col md:flex-row justify-center gap-4 mt-10">
+      <a href="assets/cv.pdf" download class="bg-white text-emerald-900 px-8 py-4 rounded-full font-bold shadow-lg hover:bg-gray-100 transition hover-scale inline-flex items-center justify-center gap-2">
+        <i data-feather="download" class="w-5 h-5"></i> Download CV
+      </a>
+      <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-emerald-900 transition hover-scale">
+        Hubungi Saya
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-24 fade-in">
+  <div class="max-w-5xl mx-auto px-6">
+    <h3 class="text-4xl font-bold text-emerald-800 dark:text-emerald-400 mb-4 text-center">Tentang Saya</h3>
+    <div class="h-1 w-24 bg-emerald-500 mx-auto mb-12"></div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-lg leading-relaxed mb-6 dark:text-gray-300">
+          Sebagai pendidik Bahasa Arab dan Tahfidz Al-Qur'an, saya memiliki dedikasi mendalam dalam mengembangkan metode pembelajaran yang sistematis, mudah dipahami, dan berbasis manhaj yang lurus.
+        </p>
+        <p class="text-lg leading-relaxed mb-6 dark:text-gray-300">
+          Pengalaman mengajar di berbagai institusi pendidikan Islam telah membentuk pemahaman saya tentang kebutuhan peserta didik modern yang tetap memegang nilai-nilai autentik.
+        </p>
+        <p class="text-lg leading-relaxed dark:text-gray-300">
+          Aktif dalam kegiatan dakwah dan fokus pada pengembangan karakter peserta didik, saya percaya bahwa pendidikan bukan hanya transfer ilmu, tetapi pembentukan akhlak dan kepribadian Islami.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-md">
+          <h4 class="font-bold text-emerald-900 dark:text-emerald-300 mb-2">🎓 Keahlian Utama</h4>
+          <p class="text-sm dark:text-gray-200">Bahasa Arab, Tahfidz Al-Qur'an, Tajwid, Metodologi Pembelajaran Islam</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-md">
+          <h4 class="font-bold text-emerald-900 dark:text-emerald-300 mb-2">💡 Fokus Pembelajaran</h4>
+          <p class="text-sm dark:text-gray-200">Struktural, Interaktif, Berbasis Karakter, dan Berkelanjutan</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-md">
+          <h4 class="font-bold text-emerald-900 dark:text-emerald-300 mb-2">🤝 Misi</h4>
+          <p class="text-sm dark:text-gray-200">Membentuk generasi yang hafiz, paham, dan berakhlak mulia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section id="experience" class="bg-gray-50 dark:bg-gray-800 py-24 fade-in">
+  <div class="max-w-5xl mx-auto px-6">
+    <h3 class="text-4xl font-bold text-emerald-800 dark:text-emerald-400 mb-4 text-center">Pengalaman Mengajar</h3>
+    <div class="h-1 w-24 bg-emerald-500 mx-auto mb-12"></div>
+
+    <div class="space-y-6">
+      <!-- Experience 1 -->
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-l-4 border-emerald-500 hover-scale">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h4 class="text-2xl font-bold text-emerald-900 dark:text-emerald-300">Guru Bahasa Arab</h4>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Islamic Educational Institution</p>
+          </div>
+          <span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold">Aktif</span>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
+          Mengajar Bahasa Arab dengan fokus pada tata bahasa (nahu dan sharaf), kosakata praktis, dan pemahaman teks Islami. Mengembangkan materi pembelajaran yang sistematis dan disesuaikan dengan tingkat kemampuan peserta didik.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Nahu</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Sharaf</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Qiroah</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Metodologi</span>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-l-4 border-emerald-500 hover-scale">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h4 class="text-2xl font-bold text-emerald-900 dark:text-emerald-300">Pendidik Tahfidz & Tajwid</h4>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Qur'an Memorization Program</p>
+          </div>
+          <span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold">Aktif</span>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
+          Membimbing proses penghafalan Al-Qur'an dengan sistem evaluasi yang ketat, koreksi tajwid yang tepat, dan motivasi berkelanjutan. Menggunakan metode yang telah terbukti efektif untuk memastikan kualitas hafalan.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Tahfidz</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Tajwid</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Evaluasi</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Mentoring</span>
+        </div>
+      </div>
+
+      <!-- Experience 3 -->
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-l-4 border-emerald-500 hover-scale">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h4 class="text-2xl font-bold text-emerald-900 dark:text-emerald-300">Mentor Karakter & Dakwah</h4>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Islamic Youth Program</p>
+          </div>
+          <span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold">Aktif</span>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
+          Aktif dalam kegiatan dakwah dan pengembangan karakter peserta didik. Memberikan bimbingan holistik yang menggabungkan pengetahuan Islami, akhlak mulia, dan keterampilan praktis untuk kehidupan modern.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Dakwah</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Character Building</span>
+          <span class="bg-emerald-50 dark:bg-gray-600 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full text-sm">Leadership</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION SECTION -->
+<section id="education" class="py-24 fade-in">
+  <div class="max-w-5xl mx-auto px-6">
+    <h3 class="text-4xl font-bold text-emerald-800 dark:text-emerald-400 mb-4 text-center">Pendidikan</h3>
+    <div class="h-1 w-24 bg-emerald-500 mx-auto mb-12"></div>
+
+    <div class="space-y-6">
+      <!-- Education 1 -->
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-t-4 border-emerald-500">
+        <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-2">Pendidikan Formal</h4>
+        <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+          Latar belakang pendidikan di institusi Islami dengan penekanan pada pemahaman Al-Qur'an, hadis, dan metodologi pembelajaran Islami yang autentik.
+        </p>
+      </div>
+
+      <!-- Education 2 -->
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-t-4 border-emerald-500">
+        <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-2">Pengembangan Profesional</h4>
+        <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+          Aktif mengikuti pelatihan pedagogis, workshop pengembangan metode pembelajaran, dan seminar Islami untuk meningkatkan kompetensi mengajar secara berkelanjutan.
+        </p>
+      </div>
+
+      <!-- Education 3 -->
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-t-4 border-emerald-500">
+        <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-2">Sertifikasi</h4>
+        <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+          Memiliki sertifikasi dalam bidang pengajaran Bahasa Arab, Tajwid, dan metode pembelajaran modern yang relevan dengan praktik edukatif kontemporer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio" class="bg-gray-50 dark:bg-gray-800 py-24 fade-in">
+  <div class="max-w-5xl mx-auto px-6">
+    <h3 class="text-4xl font-bold text-emerald-800 dark:text-emerald-400 mb-4 text-center">Portfolio & Karya</h3>
+    <div class="h-1 w-24 bg-emerald-500 mx-auto mb-12"></div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Portfolio 1 -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover-scale group">
+        <div class="h-40 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+          <i data-feather="book-open" class="w-16 h-16 text-white"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-3">Materi Tajwid</h4>
+          <p class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed mb-4">
+            Koleksi materi pembelajaran tajwid yang terstruktur dengan visual yang jelas dan penjelasan mendalam untuk setiap hukum.
+          </p>
+          <a href="#" class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm hover:text-emerald-700 transition">Lihat Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio 2 -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover-scale group">
+        <div class="h-40 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+          <i data-feather="target" class="w-16 h-16 text-white"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-3">Sistem Tahfidz</h4>
+          <p class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed mb-4">
+            Sistem perencanaan dan evaluasi penghafalan Al-Qur'an yang komprehensif dan terbukti meningkatkan kualitas hafalan peserta didik.
+          </p>
+          <a href="#" class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm hover:text-emerald-700 transition">Lihat Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio 3 -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover-scale group">
+        <div class="h-40 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+          <i data-feather="pen-tool" class="w-16 h-16 text-white"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-3">Tulisan Edukatif</h4>
+          <p class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed mb-4">
+            Artikel dakwah, panduan pembelajaran, dan penulisan Islami yang dirancang untuk menginspirasi dan mengedukasi pembaca.
+          </p>
+          <a href="#" class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm hover:text-emerald-700 transition">Lihat Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio 4 -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover-scale group">
+        <div class="h-40 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+          <i data-feather="layers" class="w-16 h-16 text-white"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-3">Kurikulum Pembelajaran</h4>
+          <p class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed mb-4">
+            Kurikulum terpadu yang menggabungkan bahasa Arab, Qur'an, dan nilai-nilai Islami dalam satu program pembelajaran holistik.
+          </p>
+          <a href="#" class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm hover:text-emerald-700 transition">Lihat Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio 5 -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover-scale group">
+        <div class="h-40 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+          <i data-feather="play-circle" class="w-16 h-16 text-white"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-3">Video Pembelajaran</h4>
+          <p class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed mb-4">
+            Konten video edukatif untuk pembelajaran Bahasa Arab dan Tajwid yang mudah diikuti dan interaktif.
+          </p>
+          <a href="#" class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm hover:text-emerald-700 transition">Lihat Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio 6 -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover-scale group">
+        <div class="h-40 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+          <i data-feather="award" class="w-16 h-16 text-white"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-emerald-900 dark:text-emerald-300 mb-3">Prestasi Siswa</h4>
+          <p class="text-gray-700 dark:text-gray-200 text-sm leading-relaxed mb-4">
+            Dokumentasi pencapaian siswa dalam lomba akademik, hafalan Qur'an, dan pengembangan karakter yang signifikan.
+          </p>
+          <a href="#" class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm hover:text-emerald-700 transition">Lihat Selengkapnya →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="bg-gradient-to-b from-emerald-900 to-emerald-800 dark:from-gray-800 dark:to-gray-900 text-white py-24 fade-in">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h3 class="text-4xl font-bold mb-4">Hubungi Saya</h3>
+    <p class="text-emerald-200 mb-12 text-lg">Tertarik berkolaborasi atau ingin mendiskusikan sesuatu? Mari terhubung!</p>
+
+    <!-- Contact Form -->
+    <form class="max-w-2xl mx-auto bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8 text-gray-800 dark:text-gray-200 mb-12" onsubmit="handleSubmit(event)">
+      <div class="mb-6">
+        <input type="text" placeholder="Nama Anda" required class="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition" />
+      </div>
+      <div class="mb-6">
+        <input type="email" placeholder="Email Anda" required class="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition" />
+      </div>
+      <div class="mb-6">
+        <textarea placeholder="Pesan Anda" rows="5" required class="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition resize-none"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg transition duration-300">
+        Kirim Pesan
+      </button>
+    </form>
+
+    <!-- Direct Contact Info -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <a href="mailto:your@email.com" class="bg-white dark:bg-gray-700 text-emerald-900 dark:text-emerald-300 p-6 rounded-xl hover:shadow-lg transition hover-scale">
+        <i data-feather="mail" class="w-8 h-8 mx-auto mb-3"></i>
+        <p class="font-semibold">Email</p>
+        <p class="text-sm">your@email.com</p>
+      </a>
+
+      <a href="https://wa.me/62XXXXXXXXXX" target="_blank" class="bg-white dark:bg-gray-700 text-emerald-900 dark:text-emerald-300 p-6 rounded-xl hover:shadow-lg transition hover-scale">
+        <i data-feather="message-circle" class="w-8 h-8 mx-auto mb-3"></i>
+        <p class="font-semibold">WhatsApp</p>
+        <p class="text-sm">+62 XXX XXXX XXXX</p>
+      </a>
+
+      <a href="https://www.instagram.com/" target="_blank" class="bg-white dark:bg-gray-700 text-emerald-900 dark:text-emerald-300 p-6 rounded-xl hover:shadow-lg transition hover-scale">
+        <i data-feather="instagram" class="w-8 h-8 mx-auto mb-3"></i>
+        <p class="font-semibold">Instagram</p>
+        <p class="text-sm">@yourinstagram</p>
+      </a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex justify-center gap-6 mb-12">
+      <a href="https://www.instagram.com/" target="_blank" class="w-12 h-12 bg-white dark:bg-gray-700 text-emerald-900 dark:text-emerald-300 rounded-full flex items-center justify-center hover:shadow-lg transition hover-scale">
+        <i data-feather="instagram" class="w-6 h-6"></i>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" class="w-12 h-12 bg-white dark:bg-gray-700 text-emerald-900 dark:text-emerald-300 rounded-full flex items-center justify-center hover:shadow-lg transition hover-scale">
+        <i data-feather="youtube" class="w-6 h-6"></i>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" class="w-12 h-12 bg-white dark:bg-gray-700 text-emerald-900 dark:text-emerald-300 rounded-full flex items-center justify-center hover:shadow-lg transition hover-scale">
+        <i data-feather="linkedin" class="w-6 h-6"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="w-12 h-12 bg-white dark:bg-gray-700 text-emerald-900 dark:text-emerald-300 rounded-full flex items-center justify-center hover:shadow-lg transition hover-scale">
+        <i data-feather="twitter" class="w-6 h-6"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-emerald-950 dark:bg-gray-950 text-white text-center py-8">
+  <div class="max-w-5xl mx-auto px-6">
+    <p class="mb-2">© 2026 Insan Anshori Pasi. All Rights Reserved.</p>
+    <p class="text-emerald-200 text-sm">Dedicated to Quality Islamic Education</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+feather.replace();
+
+function toggleDark() {
+  const html = document.documentElement;
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+}
+
+// Load saved theme preference
+const theme = localStorage.getItem('theme');
+if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark');
+}
+
+// Fade-in animation on scroll
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2 };
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+// Form submission handler
+function handleSubmit(event) {
+  event.preventDefault();
+  alert('Terima kasih telah mengirim pesan! Saya akan segera menghubungi Anda.');
+  event.target.reset();
+}
+
+// Smooth scroll behavior
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close mobile menu if open
+      document.getElementById('mobile-menu').classList.add('hidden');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
